@@ -82,49 +82,48 @@ inquirer
 
         for (let i = 0; i < Object.keys(licenses).length; i++) {
             let licenseNum = Object.keys(licenses)[i];
-            console.log(licenses[licenseNum].name);
             if (answers.license == licenses[licenseNum].name) {
                 licenseBadge = licenses[licenseNum].badge;
                 licenseDescription = licenses[licenseNum].description;
                 break;
             }
         }
-        let markdown =
-            `# ${answers.title}
-            ${licenseBadge}
+        let markdown = `# ${answers.title}
+        
+${licenseBadge}
 
-            ## License
-            ${licenseDescription}
-        
-            ## Description
-        
-            ${answers.description}
+## License
             
-            ## Installation 
+${licenseDescription}
+        
+## Description
+    
+${answers.description}
+        
+## Installation 
 
-            ${answers.installation}
+${answers.installation}
 
-            ## Usage
+## Usage
 
-            ${answers.usage}
+${answers.usage}
 
-            ## Contributing
+## Contributing
 
-            ${answers.contribution}
+${answers.contribution}
 
-            ## Tests
+## Tests
 
-            ${answers.testing}
+${answers.testing}`
 
-            `
-        console.log(markdown);
+        writeToFile('README.md', markdown);
+
     });
 
 
 // TODO: Create a function to write README file
 const writeToFile = (fileName, data) => {
-    console.log("Function invocation");
-    // fs.writeFile('README.md',)
+    fs.writeFile(fileName, data, e => e ? console.error(e) : console.log("File created!"))
 }
 
 // TODO: Create a function to initialize app
