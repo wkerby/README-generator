@@ -7,12 +7,12 @@ const licenses = {
     license1: {
         name: 'Apache2.0',
         badge: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
-        description: `This license is covered under ${this.name}`
+        description: `This license is covered under Apache2.0`
     },
     license2: {
         name: 'Boost',
         badge: '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)',
-        description: `This license is covered under ${this.name}`
+        description: `This license is covered under Boost`
     }
 };
 
@@ -77,36 +77,42 @@ inquirer
     .prompt(questions
     )
     .then(answers => {
-        var licenseBadge = 0;
+        var licenseBadge;
+        var licenseDescription;
+
         for (let i = 0; i < Object.keys(licenses).length; i++) {
             let licenseNum = Object.keys(licenses)[i];
             console.log(licenses[licenseNum].name);
             if (answers.license == licenses[licenseNum].name) {
                 licenseBadge = licenses[licenseNum].badge;
+                licenseDescription = licenses[licenseNum].description;
                 break;
             }
         }
         let markdown =
             `# ${answers.title}
-            ${licenseBadge};
+            ${licenseBadge}
+
+            ## License
+            ${licenseDescription}
         
             ## Description
         
             ${answers.description}
             
-            ##Installation 
+            ## Installation 
 
             ${answers.installation}
 
-            ##Usage
+            ## Usage
 
             ${answers.usage}
 
-            ##Contributing
+            ## Contributing
 
             ${answers.contribution}
 
-            ##Tests
+            ## Tests
 
             ${answers.testing}
 
