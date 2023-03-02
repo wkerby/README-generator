@@ -2,80 +2,66 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-inquirer
-    .prompt([
-        {
-            type: 'input',
-            message: 'Please enter your GitHub username',
-            name: 'username',
-        },
-        {
-            type: 'input',
-            message: 'Please enter your email address',
-            name: 'email',
-        },
-        {
-            type: 'input',
-            message: 'Please provide a link to your GitHub profile',
-            name: 'profile-link',
-        },
-        {
-            type: 'input',
-            message: 'What is the title of your project?',
-            name: 'project-title'
-
-        },
-        {
-            type: 'input',
-            message: 'Please provide a brief description of your project',
-            name: 'project-description'
-        },
-        {
-            type: 'input',
-            message: 'Please provide any necessary installation instructions',
-            name: 'installation-instructions'
-        },
-        {
-            type: 'input',
-            message: 'Please provide usage information',
-            name: 'project-usage'
-        },
-        {
-            type: 'input',
-            message: 'Please provide any guidelines for contribution to the project',
-            name: 'project-contribution'
-        },
-        {
-            type: 'input',
-            message: 'Please provide instructions for testing',
-            name: 'project-testing'
-
-        },
-        {
-            type: 'list',
-            name: 'project-license',
-            message: 'Choose a license for your application',
-            choices: ['license1', 'license2', 'license3'],
-        },
-    ]);
-
-
-// inquirer
-//     .prompt([
-//         {
-//             type: 'list',
-//             name: 'reptile',
-//             message: 'Which is better?',
-//             choices: ['alligator', 'crocodile'],
-//         },
-//     ])
-//     .then(answers => {
-//         console.info('Answer:', answers.reptile);
-//     });
-
-
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+    {
+        type: 'input',
+        message: 'Please enter your GitHub username',
+        name: 'username',
+    },
+    {
+        type: 'input',
+        message: 'Please enter your email address',
+        name: 'email',
+    },
+    {
+        type: 'input',
+        message: 'Please provide a link to your GitHub profile',
+        name: 'profile-link',
+    },
+    {
+        type: 'input',
+        message: 'What is the title of your project?',
+        name: 'project-title'
+
+    },
+    {
+        type: 'input',
+        message: 'Please provide a brief description of your project',
+        name: 'project-description'
+    },
+    {
+        type: 'input',
+        message: 'Please provide any necessary installation instructions',
+        name: 'installation-instructions'
+    },
+    {
+        type: 'input',
+        message: 'Please provide usage information',
+        name: 'project-usage'
+    },
+    {
+        type: 'input',
+        message: 'Please provide any guidelines for contribution to the project',
+        name: 'project-contribution'
+    },
+    {
+        type: 'input',
+        message: 'Please provide instructions for testing',
+        name: 'project-testing'
+
+    },
+    {
+        type: 'list',
+        name: 'project-license',
+        message: 'Choose a license for your application',
+        choices: ['license1', 'license2', 'license3'],
+    },
+];
+
+inquirer
+    .prompt(questions
+    );
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) { }
