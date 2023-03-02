@@ -3,7 +3,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 
 //create licenses object
-licenses = {
+const licenses = {
     license1: {
         name: 'Apache2.0',
         badge: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
@@ -77,8 +77,18 @@ inquirer
     .prompt(questions
     )
     .then(answers => {
+        var licenseBadge = 0;
+        for (let i = 0; i < Object.keys(licenses).length; i++) {
+            let licenseNum = Object.keys(licenses)[i];
+            console.log(licenses[licenseNum].name);
+            if (answers.license == licenses[licenseNum].name) {
+                licenseBadge = licenses[licenseNum].badge;
+                break;
+            }
+        }
         let markdown =
             `# ${answers.title}
+            ${licenseBadge};
         
             ## Description
         
