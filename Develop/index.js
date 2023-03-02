@@ -63,6 +63,13 @@ inquirer
     .prompt(questions
     );
 
+
+const markdown = `
+
+
+
+`
+
 // TODO: Create a function to write README file
 const writeToFile = (fileName, data) => {
     fs.writeFile('README.md',)
