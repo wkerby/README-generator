@@ -118,7 +118,10 @@ ${answers.testing}
 
 ## Questions
 
+If you have any questions, feel free to contact me at ${answers.email}
+My GitHub username is ${answers.username}, and a link to my GitHub profile is listed below:
 
+${answers.link}
 
 `
 
