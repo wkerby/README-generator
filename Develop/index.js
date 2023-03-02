@@ -64,11 +64,17 @@ inquirer
     );
 
 
-const markdown = `
+const markdown = `# ${answers.project - title}
 
+## Description
 
+[Insert description here]
 
-`
+## User Story
+
+## Usage
+
+`;
 
 // TODO: Create a function to write README file
 const writeToFile = (fileName, data) => {
