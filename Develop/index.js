@@ -89,12 +89,15 @@ inquirer
             }
         }
         let markdown = `# ${answers.title}
-${licenseBadge}             
+${licenseBadge}
+
 ## Description
     
 ${answers.description}
 
 ## Table of Contents
+
+Add table of contents here
         
 ## Installation 
 
@@ -118,10 +121,11 @@ ${answers.testing}
 
 ## Questions
 
-If you have any questions, feel free to contact me at ${answers.email}
-My GitHub username is ${answers.username}, and a link to my GitHub profile is listed below:
+ - If you have any questions, feel free to contact me at ${answers.email}
+ - My GitHub username is ${answers.username}
+ - a link to my GitHub profile is listed below:
 
-${answers.link}
+   ${answers.link}
 
 `
 
