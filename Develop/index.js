@@ -2,6 +2,20 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+//create licenses object
+licenses = {
+    license1: {
+        name: 'Apache2.0',
+        badge: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
+        description: `This license is covered under ${this.name}`
+    },
+    license2: {
+        name: 'Boost',
+        badge: '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)',
+        description: `This license is covered under ${this.name}`
+    }
+};
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -55,7 +69,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Choose a license for your application',
-        choices: ['license1', 'license2', 'license3'],
+        choices: [licenses.license1.name, licenses.license2.name],
     },
 ];
 
