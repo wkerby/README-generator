@@ -61,8 +61,10 @@ const questions = [
 
 inquirer
     .prompt(questions
-    );
-
+    )
+    .then(answers => {
+        console.log(`The title is ${answers.title}`);
+    });
 
 
 // TODO: Create a function to write README file
