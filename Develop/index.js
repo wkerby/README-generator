@@ -65,24 +65,24 @@ inquirer
 
 //create variable in which to store markdown 
 
-const markdown = `# [Title]
+// const markdown = `# ${answers.project - title}
 
-## Description
+// ## Description
 
-[Insert description here]
+// [Insert description here]
 
-## User Story
+// ## User Story
 
-## Usage
+// ## Usage
 
-`
+// `;
 
-console.log(markdown);
+// console.log(markdown);
 
-// TODO: Create a function to write README file
-const writeToFile = (fileName, data) => {
-    fs.writeFile('README.md',)
-}
+// // TODO: Create a function to write README file
+// const writeToFile = (fileName, data) =>
+//     fs.writeFile('README.md',)
+// };
 
 // TODO: Create a function to initialize app
 function init() { }
