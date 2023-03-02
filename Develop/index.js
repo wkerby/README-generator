@@ -17,43 +17,43 @@ const questions = [
     {
         type: 'input',
         message: 'Please provide a link to your GitHub profile',
-        name: 'profile-link',
+        name: 'link',
     },
     {
         type: 'input',
         message: 'What is the title of your project?',
-        name: 'project-title'
+        name: 'title'
 
     },
     {
         type: 'input',
         message: 'Please provide a brief description of your project',
-        name: 'project-description'
+        name: 'description'
     },
     {
         type: 'input',
         message: 'Please provide any necessary installation instructions',
-        name: 'installation-instructions'
+        name: 'installation'
     },
     {
         type: 'input',
         message: 'Please provide usage information',
-        name: 'project-usage'
+        name: 'usage'
     },
     {
         type: 'input',
         message: 'Please provide any guidelines for contribution to the project',
-        name: 'project-contribution'
+        name: 'contribution'
     },
     {
         type: 'input',
         message: 'Please provide instructions for testing',
-        name: 'project-testing'
+        name: 'testing'
 
     },
     {
         type: 'list',
-        name: 'project-license',
+        name: 'license',
         message: 'Choose a license for your application',
         choices: ['license1', 'license2', 'license3'],
     },
@@ -62,6 +62,8 @@ const questions = [
 inquirer
     .prompt(questions
     );
+
+
 
 // TODO: Create a function to write README file
 const writeToFile = (fileName, data) => {
