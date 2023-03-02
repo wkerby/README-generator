@@ -89,16 +89,12 @@ inquirer
             }
         }
         let markdown = `# ${answers.title}
-        
-${licenseBadge}
-
-## License
-            
-${licenseDescription}
-        
+${licenseBadge}             
 ## Description
     
 ${answers.description}
+
+## Table of Contents
         
 ## Installation 
 
@@ -108,13 +104,23 @@ ${answers.installation}
 
 ${answers.usage}
 
+## License
+
+${licenseDescription}
+
 ## Contributing
 
 ${answers.contribution}
 
 ## Tests
 
-${answers.testing}`
+${answers.testing}
+
+## Questions
+
+
+
+`
 
         writeToFile('README.md', markdown);
 
