@@ -63,13 +63,38 @@ inquirer
     .prompt(questions
     )
     .then(answers => {
-        console.log(`The title is ${answers.title}`);
+        let markdown =
+            `# ${answers.title}
+        
+            ## Description
+        
+            ${answers.description}
+            
+            ##Installation 
+
+            ${answers.installation}
+
+            ##Usage
+
+            ${answers.usage}
+
+            ##Contributing
+
+            ${answers.contribution}
+
+            ##Tests
+
+            ${answers.testing}
+
+            `
+        console.log(markdown);
     });
 
 
 // TODO: Create a function to write README file
 const writeToFile = (fileName, data) => {
-    fs.writeFile('README.md',)
+    console.log("Function invocation");
+    // fs.writeFile('README.md',)
 }
 
 // TODO: Create a function to initialize app
