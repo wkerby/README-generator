@@ -7,12 +7,12 @@ const licenses = {
     license1: {
         name: 'Apache2.0',
         badge: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
-        description: `This license is covered under Apache2.0`
+        description: `This application is covered under Apache2.0`
     },
     license2: {
         name: 'Boost',
         badge: '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)',
-        description: `This license is covered under Boost`
+        description: `This application is covered under Boost`
     }
 };
 
@@ -91,13 +91,25 @@ inquirer
         let markdown = `# ${answers.title}
 ${licenseBadge}
 
+## Table of Contents
+
+[Description](#description)
+
+[Installation](#installation)
+
+[Usage](#usage)
+
+[License](#license)
+
+[Contributing](#contributing)
+
+[Tests](#tests)
+
+[Questions](#questions)
+
 ## Description
     
 ${answers.description}
-
-## Table of Contents
-
-Add table of contents here
         
 ## Installation 
 
